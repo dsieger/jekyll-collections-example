@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="page">
+
+  <h1 class="mt-4 publication-title">{{ page.title }}</h1>
+
+  <div class="publication-authors">
+    {{ page.authors }}
+  </div>
+
+  <div class="publication-info">
+    {{ page.publication }}, {{ page.year}}
+  </div>
+
+  <div class="publication-teaser">
+    <img src="/images/{{ page.slug }}.png" alt="project teaser"/>
+  </div>
+
+  {{ content }}
+
+  <h2 id="downloads">Downloads</h2>
+  <p>
+    <a href="/download/{{ page.slug }}.pdf"><i class="far fa-file-pdf"></i> PDF</a>&nbsp;&nbsp;
+    {% if page.slides %}
+    <a href="/download/{{ page.slug }}_slides.pdf"><i class="far fa-file-pdf"></i> Slides</a>&nbsp;&nbsp;
+    {% endif %}
+    <a href="/download/{{ page.slug }}.bib"><i class="far fa-file-alt"></i> BibTex</a>&nbsp;&nbsp;
+    {% if page.doi %}
+    <a href="{{ page.doi }}"><i class="fas fa-external-link-alt"></i> DOI</a>&nbsp;&nbsp;
+    {% endif %}
+  </p>
+</div>

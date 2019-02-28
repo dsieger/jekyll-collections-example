@@ -1,4 +1,8 @@
-title: Jekyll Bootstrap
+title: Jekyll Collections Example
 sass:
   sass_dir: css
   style:    compressed
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:name
